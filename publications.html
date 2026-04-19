@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Publications | Dr. Hong-Yuan Guo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -38,6 +38,13 @@
         <p style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 500;">&copy; 2026 Hong-Yuan Guo. All Rights Reserved.</p>
     </footer>
     <script>
+        // Force scroll to top on fresh load
+        window.addEventListener('load', () => {
+            if (!window.location.hash) {
+                window.scrollTo(0, 0);
+            }
+        });
+
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('mobile-menu');
         const navLinks = document.querySelector('.nav-links');
